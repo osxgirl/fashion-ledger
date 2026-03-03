@@ -8,7 +8,10 @@ def load_items():
         return []
 
     with open(FILE, "r") as f:
-        return json.load(f)
+        try:
+            return json.load(f)
+        except json.JSONDecodeError:
+            return []
 
 def save_items(new_items):
     items = load_items()
