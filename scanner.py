@@ -1,5 +1,3 @@
-import cv2
-import pytesseract
 from storage import load_items, save_items
 import re
 from models.item import FashionItem
